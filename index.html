@@ -3,12 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Order</title>
+    <title>Restaurant Menu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="menu">Menu</div>
-    <div id="order">Order</div>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Restaurant Logo">
+                <h2>Your Restaurant Menu</h2>
+                <p>Your Slogan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Your Orders</li>
+                    <li>Wallet</li>
+                    <li>Profile</li>
+                    <li>Logout</li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <input type="text" placeholder="Search Food Item">
+                <button>Signup</button>
+                <button>Login</button>
+            </header>
+            <section class="banner">
+                <h1>Delicious Food Menu</h1>
+                <p>Weekend Special - Save up to 50% Off</p>
+            </section>
+            <section id="menu-container" class="menu"></section>
+        </main>
+    </div>
+    
+    <div class="order-screen" style="display: none;">
+        <h1>Order Summary</h1>
+        <div id="order-summary"></div>
+        <button onclick="startOrder()">Confirm Order</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
